@@ -30,6 +30,6 @@ public class GameLogicManager {
     }
 
     public int calculateExp(int exerciseCalories){
-        return exerciseCalories / 10;
+        return exerciseCalories / 5;
     }
 }
