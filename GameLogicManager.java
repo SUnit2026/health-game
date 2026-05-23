@@ -1,7 +1,15 @@
 package com.example.healthgame.logic;
 
 public class GameLogicManager {
-    public int calculateNetCalories(int food, int exercise) { return food - exercise; }
+    public int calculateNetCalories(int food, int exercise) {
+        int net = food - exercise;
+
+    if(net < 0)
+        return 0;
+
+    return net;
+        
+    }
 
     public int updateCharacterState(int netCalories) {
         if(netCalories <= 0) return 3;
