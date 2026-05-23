@@ -19,9 +19,12 @@ public class GameLogicManager {
     }
 
     public String calculateDailyRating(int netCalories){
-        if(netCalories <= 0) return "S";
-        else if(netCalories <= 300) return "A";
-        else if(netCalories <= 700) return "B";
+        if(netCalories <= 100)
+            return "S";
+        else if(netCalories <= 300)
+            return "A";
+        else if(netCalories <= 600)
+            return "B";
         else return "C";
     }
 
