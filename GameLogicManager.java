@@ -29,8 +29,14 @@ public class GameLogicManager {
     }
 
     public int updateStreak(int currentStreak, boolean todaySuccess){
-        if(todaySuccess) return currentStreak + 1;
-        return 0;
+        
+    if(todaySuccess)
+        return currentStreak + 1;
+
+    if(currentStreak > 0)
+        return currentStreak - 1;
+
+    return 0;
     }
 
     public String updateTitle(int streak){
