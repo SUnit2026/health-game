@@ -33,6 +33,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL(recordTable);
         db.execSQL(characterTable);
+        db.execSQL(
+        "INSERT INTO character VALUES(1,0,0,0,'초보자')"
+        );
     }
 
     @Override
