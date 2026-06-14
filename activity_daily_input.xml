@@ -5,12 +5,14 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/foodInput"
-        android:hint="음식 칼로리"/>
+    android:id="@+id/foodInput"
+    android:hint="음식 칼로리"
+    android:inputType="number"/>
 
     <EditText
-        android:id="@+id/exerciseInput"
-        android:hint="운동 칼로리"/>
+    android:id="@+id/exerciseInput"
+    android:hint="운동 칼로리"
+    android:inputType="number"/>
 
     <Button
         android:id="@+id/saveButton"
