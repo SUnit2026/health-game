@@ -25,6 +25,14 @@ public class DailyInputActivity extends AppCompatActivity {
         gameLogic = new GameLogicManager();
 
         saveButton.setOnClickListener(v -> {
+
+            if(foodInput.getText().toString().isEmpty()
+            || exerciseInput.getText().toString().isEmpty()){
+
+            resultText.setText("칼로리를 입력해주세요");
+            return;
+            }
+            
             int food = Integer.parseInt(foodInput.getText().toString());
             int exercise = Integer.parseInt(exerciseInput.getText().toString());
 
