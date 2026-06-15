@@ -36,6 +36,12 @@ public class DailyInputActivity extends AppCompatActivity {
             int food = Integer.parseInt(foodInput.getText().toString());
             int exercise = Integer.parseInt(exerciseInput.getText().toString());
 
+            if(food == 0 && exercise == 0){
+
+            resultText.setText("정확한 칼로리를 입력해주세요");
+            return;
+            }
+
             int net = gameLogic.calculateNetCalories(food, exercise);
             int state = gameLogic.updateCharacterState(net);
             String rating = gameLogic.calculateDailyRating(net);
